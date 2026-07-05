@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>NGUYEN PHI ANH // DEV_MACHINE</title>
+    <meta
+      name="description"
+      content="Portfolio của Nguyễn Phi Anh - Full Stack Developer tại UET-VNU. Chuyên Node.js, React, C#, Python."
+    />
+    <meta property="og:title" content="Nguyen Phi Anh - Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="Full Stack Developer | UET - VNU | Node.js, React, C#, Python"
+    />
+    <meta property="og:type" content="website" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌨️</text></svg>"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Material Symbols -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ============ HEADER ============ -->
+    <header class="header" id="header">
+      <div class="header__logo">NPA:DEV_MACHINE</div>
+      <nav class="header__nav">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#stack" class="nav-link">Stack</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <a href="#contact" class="btn btn--primary header__cta">
+        <span class="material-symbols-outlined">mail</span>
+        Hire Me
+      </a>
+      <!-- Mobile menu button -->
+      <button class="header__menu-btn" id="menuBtn" aria-label="Menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </header>
+
+    <!-- ============ MOBILE NAV ============ -->
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="#about" class="mobile-nav__link" onclick="closeMobileNav()">
+        <span class="material-symbols-outlined">person</span>
+        About
+      </a>
+      <a href="#stack" class="mobile-nav__link" onclick="closeMobileNav()">
+        <span class="material-symbols-outlined">memory</span>
+        Stack
+      </a>
+      <a href="#projects" class="mobile-nav__link" onclick="closeMobileNav()">
+        <span class="material-symbols-outlined">folder_open</span>
+        Projects
+      </a>
+      <a href="#contact" class="mobile-nav__link" onclick="closeMobileNav()">
+        <span class="material-symbols-outlined">mail</span>
+        Contact
+      </a>
+    </nav>
+
+    <!-- ============ MAIN ============ -->
+    <main class="main">
+      <!-- ===== HERO ===== -->
+      <section class="hero" id="about">
+        <div class="hero__content">
+          <div class="hero__status neo-shadow">
+            <span class="status-dot"></span>
+            STATUS: ONLINE
+          </div>
+          <h1 class="hero__title">
+            NGUYEN<br />PHI ANH
+            <span class="hero__subtitle">// FULL-STACK DEV</span>
+          </h1>
+          <div class="hero__info neo-shadow">
+            <p class="hero__desc">
+              <span class="material-symbols-outlined">school</span>
+              UET - VNU (University of Engineering and Technology)
+            </p>
+            <p class="hero__desc">
+              <span class="material-symbols-outlined">calendar_month</span>
+              <span data-i18n="hero.born">Born 2005 · Hanoi, Vietnam</span>
+            </p>
+            <p class="hero__desc hero__desc--bio" data-i18n="hero.bio">
+              Full-stack developer đam mê xây dựng các ứng dụng web hiện đại, từ
+              e-commerce đến AI chatbot. Luôn tìm kiếm những thử thách mới trong
+              thế giới công nghệ.
+            </p>
+          </div>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary btn--lg">
+              <span class="material-symbols-outlined">rocket_launch</span>
+              VIEW_PROJECTS()
+            </a>
+            <a href="#contact" class="btn btn--outline btn--lg">
+              <span class="material-symbols-outlined">download</span>
+              CONTACT_ME
+            </a>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <div class="hero__avatar-wrapper">
+            <div class="hero__avatar-bg"></div>
+            <div class="hero__avatar neo-shadow">
+              <div class="avatar-placeholder">
+                <span class="avatar-letter">A</span>
+                <div class="avatar-terminal">
+                  <span class="terminal-line">$ whoami</span>
+                  <span class="terminal-line terminal-line--result"
+                    >nguyen_phi_anh</span
+                  >
+                  <span class="terminal-line">$ cat role.txt</span>
+                  <span class="terminal-line terminal-line--result"
+                    >Full Stack Developer</span
+                  >
+                  <span class="terminal-cursor">_</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TECH STACK ===== -->
+      <section class="section" id="stack">
+        <h2 class="section__title">
+          <span class="material-symbols-outlined">memory</span>
+          TECH_STACK
+        </h2>
+        <div class="stack-grid">
+          <!-- Node.js -->
+          <div class="keycap keycap--orange">
+            <div class="keycap__side"></div>
+            <div class="keycap__top">
+              <span class="material-symbols-outlined keycap__icon"
+                >terminal</span
+              >
+              <span class="keycap__label">Node.js</span>
+            </div>
+          </div>
+          <!-- React -->
+          <div class="keycap keycap--blue">
+            <div class="keycap__side"></div>
+            <div class="keycap__top">
+              <span class="material-symbols-outlined keycap__icon">code</span>
+              <span class="keycap__label">React</span>
+            </div>
+          </div>
+          <!-- C# -->
+          <div class="keycap keycap--purple">
+            <div class="keycap__side"></div>
+            <div class="keycap__top">
+              <span class="material-symbols-outlined keycap__icon"
+                >data_object</span
+              >
+              <span class="keycap__label">C#</span>
+            </div>
+          </div>
+          <!-- Python -->
+          <div class="keycap keycap--green">
+            <div class="keycap__side"></div>
+            <div class="keycap__top">
+              <span class="material-symbols-outlined keycap__icon"
+                >smart_toy</span
+              >
+              <span class="keycap__label">Python</span>
+            </div>
+          </div>
+          <!-- PostgreSQL -->
+          <div class="keycap keycap--blue">
+            <div class="keycap__side"></div>
+            <div class="keycap__top">
+              <span class="material-symbols-outlined keycap__icon"
+                >database</span
+              >
+              <span class="keycap__label">PostgreSQL</span>
+            </div>
+          </div>
+          <!-- MySQL -->
+          <div class="keycap keycap--orange">
+            <div class="keycap__side"></div>
+            <div class="keycap__top">
+              <span class="material-symbols-outlined keycap__icon"
+                >storage</span
+              >
+              <span class="keycap__label">MySQL</span>
+            </div>
+          </div>
+          <!-- HTML/CSS -->
+          <div class="keycap keycap--purple">
+            <div class="keycap__side"></div>
+            <div class="keycap__top">
+              <span class="material-symbols-outlined keycap__icon">web</span>
+              <span class="keycap__label">HTML/CSS</span>
+            </div>
+          </div>
+          <!-- Git -->
+          <div class="keycap keycap--dark">
+            <div class="keycap__side"></div>
+            <div class="keycap__top">
+              <span class="material-symbols-outlined keycap__icon"
+                >merge_type</span
+              >
+              <span class="keycap__label">Git</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PROJECTS ===== -->
+      <section class="section" id="projects">
+        <h2 class="section__title">
+          <span class="material-symbols-outlined">folder_open</span>
+          LATEST_BUILDS
+        </h2>
+        <div class="projects-grid">
+          <!-- Project 1: Nexus Talent -->
+          <div class="project-window neo-shadow" data-animate>
+            <div class="window__header">
+              <span class="window__title">
+                <span class="material-symbols-outlined">work</span>
+                NEXUS_TALENT.EXE
+              </span>
+              <div class="window__controls">
+                <span class="window__ctrl"></span>
+                <span class="window__ctrl"></span>
+                <span class="window__ctrl window__ctrl--close"></span>
+              </div>
+            </div>
+            <div class="window__body">
+              <div class="window__preview window__preview--talent">
+                <span class="material-symbols-outlined preview-icon"
+                  >psychology</span
+                >
+                <div class="preview-grid">
+                  <div class="preview-bar" style="width: 85%"></div>
+                  <div class="preview-bar" style="width: 65%"></div>
+                  <div class="preview-bar" style="width: 90%"></div>
+                </div>
+              </div>
+              <h3 class="window__name">Nexus Talent</h3>
+              <p class="window__desc" data-i18n="project.nexus.desc">
+                Hệ thống tuyển dụng thông minh sử dụng AI để matching ứng viên
+                với nhà tuyển dụng, phân tích CV tự động và đánh giá kỹ năng.
+              </p>
+              <div class="window__tags">
+                <span class="tag">Node.js</span>
+                <span class="tag">React</span>
+                <span class="tag">AI/ML</span>
+                <span class="tag">PostgreSQL</span>
+              </div>
+              <button class="btn btn--outline btn--full">
+                <a
+                  href="https://github.com/Anhnguyen0812/2526II_INT3505_1_Nhom9"
+                  >VIEW SOURCE >_</a
+                >
+              </button>
+            </div>
+          </div>
+
+          <!-- Project 2: E-Commerce -->
+          <div class="project-window neo-shadow" data-animate>
+            <div class="window__header window__header--orange">
+              <span class="window__title">
+                <span class="material-symbols-outlined">shopping_cart</span>
+                E-COMMERCE.APP
+              </span>
+              <div class="window__controls">
+                <span class="window__ctrl"></span>
+                <span class="window__ctrl"></span>
+                <span
+                  class="window__ctrl window__ctrl--close window__ctrl--close-orange"
+                ></span>
+              </div>
+            </div>
+            <div class="window__body">
+              <div class="window__preview window__preview--ecom">
+                <span class="material-symbols-outlined preview-icon"
+                  >storefront</span
+                >
+                <div class="preview-cards">
+                  <div class="preview-card"></div>
+                  <div class="preview-card"></div>
+                  <div class="preview-card"></div>
+                </div>
+              </div>
+              <h3 class="window__name">E-Commerce Platform</h3>
+              <p class="window__desc" data-i18n="project.ecom.desc">
+                Nền tảng thương mại điện tử full-stack với giỏ hàng, thanh toán
+                online, quản lý kho và dashboard analytics cho admin.
+              </p>
+              <div class="window__tags">
+                <span class="tag">Node.js</span>
+                <span class="tag">React</span>
+                <span class="tag">MySQL</span>
+              </div>
+              <button class="btn btn--outline btn--full">VIEW SOURCE >_</button>
+            </div>
+          </div>
+
+          <!-- Project 3: RAG Chatbot -->
+          <div class="project-window neo-shadow" data-animate>
+            <div class="window__header window__header--purple">
+              <span class="window__title">
+                <span class="material-symbols-outlined">smart_toy</span>
+                RAG_CHATBOT.AI
+              </span>
+              <div class="window__controls">
+                <span class="window__ctrl"></span>
+                <span class="window__ctrl"></span>
+                <span
+                  class="window__ctrl window__ctrl--close window__ctrl--close-purple"
+                ></span>
+              </div>
+            </div>
+            <div class="window__body">
+              <div class="window__preview window__preview--chat">
+                <div class="chat-bubbles">
+                  <div
+                    class="chat-bubble chat-bubble--bot"
+                    data-i18n="chat.bot1"
+                  >
+                    Xin chào! Tôi có thể giúp gì?
+                  </div>
+                  <div
+                    class="chat-bubble chat-bubble--user"
+                    data-i18n="chat.user1"
+                  >
+                    Tìm thông tin...
+                  </div>
+                  <div
+                    class="chat-bubble chat-bubble--bot"
+                    data-i18n="chat.bot2"
+                  >
+                    Đây là kết quả từ RAG...
+                  </div>
+                </div>
+              </div>
+              <h3 class="window__name">RAG Chatbot</h3>
+              <p class="window__desc" data-i18n="project.rag.desc">
+                Chatbot thông minh sử dụng Retrieval-Augmented Generation, kết
+                hợp vector database để trả lời chính xác dựa trên dữ liệu riêng.
+              </p>
+              <div class="window__tags">
+                <span class="tag">Python</span>
+                <span class="tag">LangChain</span>
+                <span class="tag">LLM</span>
+              </div>
+              <button class="btn btn--outline btn--full">VIEW SOURCE >_</button>
+            </div>
+          </div>
+
+          <!-- Project 4: Web Học Tiếng Nhật -->
+          <div class="project-window neo-shadow" data-animate>
+            <div class="window__header">
+              <span class="window__title">
+                <span class="material-symbols-outlined">translate</span>
+                NIHONGO_LEARN.WEB
+              </span>
+              <div class="window__controls">
+                <span class="window__ctrl"></span>
+                <span class="window__ctrl"></span>
+                <span class="window__ctrl window__ctrl--close"></span>
+              </div>
+            </div>
+            <div class="window__body">
+              <div class="window__preview window__preview--nihongo">
+                <span class="nihongo-char">日本語</span>
+                <div class="nihongo-sub">にほんご</div>
+              </div>
+              <h3 class="window__name" data-i18n="project.nihongo.name">
+                Web Học Tiếng Nhật
+              </h3>
+              <p class="window__desc" data-i18n="project.nihongo.desc">
+                Ứng dụng web học tiếng Nhật tương tác với flashcard Kanji, luyện
+                nghe, bài tập ngữ pháp và tracking tiến độ học tập.
+              </p>
+              <div class="window__tags">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">PostgreSQL</span>
+              </div>
+              <button class="btn btn--outline btn--full">VIEW SOURCE >_</button>
+            </div>
+          </div>
+
+          <!-- Project 5: Web Tìm Trọ -->
+          <div class="project-window neo-shadow" data-animate>
+            <div class="window__header window__header--orange">
+              <span class="window__title">
+                <span class="material-symbols-outlined">home_work</span>
+                ROOM_FINDER.APP
+              </span>
+              <div class="window__controls">
+                <span class="window__ctrl"></span>
+                <span class="window__ctrl"></span>
+                <span
+                  class="window__ctrl window__ctrl--close window__ctrl--close-orange"
+                ></span>
+              </div>
+            </div>
+            <div class="window__body">
+              <div class="window__preview window__preview--room">
+                <span class="material-symbols-outlined preview-icon"
+                  >location_on</span
+                >
+                <div class="preview-map">
+                  <div class="map-pin" style="top: 30%; left: 40%"></div>
+                  <div class="map-pin" style="top: 50%; left: 60%"></div>
+                  <div class="map-pin" style="top: 70%; left: 35%"></div>
+                </div>
+              </div>
+              <h3 class="window__name" data-i18n="project.room.name">
+                Web Tìm Trọ
+              </h3>
+              <p class="window__desc" data-i18n="project.room.desc">
+                Nền tảng tìm kiếm phòng trọ với bản đồ tương tác, bộ lọc nâng
+                cao theo giá/khu vực và hệ thống đánh giá từ người thuê.
+              </p>
+              <div class="window__tags">
+                <span class="tag">C#</span>
+                <span class="tag">React</span>
+                <span class="tag">MySQL</span>
+              </div>
+              <button class="btn btn--outline btn--full">VIEW SOURCE >_</button>
+            </div>
+          </div>
+
+          <!-- Project 6: Tab Search Extension -->
+          <div class="project-window neo-shadow" data-animate>
+            <div class="window__header window__header--purple">
+              <span class="window__title">
+                <span class="material-symbols-outlined">extension</span>
+                TAB_SEARCH.EXT
+              </span>
+              <div class="window__controls">
+                <span class="window__ctrl"></span>
+                <span class="window__ctrl"></span>
+                <span
+                  class="window__ctrl window__ctrl--close window__ctrl--close-purple"
+                ></span>
+              </div>
+            </div>
+            <div class="window__body">
+              <div class="window__preview window__preview--ext">
+                <div class="ext-search-bar">
+                  <span class="material-symbols-outlined">search</span>
+                  <span class="ext-text">Quick find tabs...</span>
+                </div>
+                <div class="ext-results">
+                  <div class="ext-result"></div>
+                  <div class="ext-result ext-result--active"></div>
+                  <div class="ext-result"></div>
+                </div>
+              </div>
+              <h3 class="window__name">Quick Tab Search</h3>
+              <p class="window__desc" data-i18n="project.tab.desc">
+                Browser extension giúp tìm kiếm và chuyển đổi tab nhanh chóng
+                với fuzzy search, keyboard shortcuts và giao diện tối giản.
+              </p>
+              <div class="window__tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">Chrome API</span>
+              </div>
+              <button class="btn btn--outline btn--full">VIEW SOURCE >_</button>
+            </div>
+          </div>
+
+          <!-- Project 7: Landing Page -->
+          <div class="project-window neo-shadow" data-animate>
+            <div class="window__header">
+              <span class="window__title">
+                <span class="material-symbols-outlined">campaign</span>
+                LANDING_PAGE.HTML
+              </span>
+              <div class="window__controls">
+                <span class="window__ctrl"></span>
+                <span class="window__ctrl"></span>
+                <span class="window__ctrl window__ctrl--close"></span>
+              </div>
+            </div>
+            <div class="window__body">
+              <div class="window__preview window__preview--landing">
+                <div class="landing-hero-mini">
+                  <div class="landing-headline"></div>
+                  <div class="landing-cta"></div>
+                </div>
+                <div class="landing-features">
+                  <div class="landing-feat"></div>
+                  <div class="landing-feat"></div>
+                  <div class="landing-feat"></div>
+                </div>
+              </div>
+              <h3 class="window__name" data-i18n="project.landing.name">
+                Landing Page Quảng Cáo
+              </h3>
+              <p class="window__desc" data-i18n="project.landing.desc">
+                Landing page chuyển đổi cao cho chiến dịch quảng cáo với thiết
+                kế responsive, animation mượt mà và tối ưu SEO/performance.
+              </p>
+              <div class="window__tags">
+                <span class="tag">HTML/CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <button class="btn btn--outline btn--full">VIEW SOURCE >_</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT ===== -->
+      <section class="section" id="contact">
+        <h2 class="section__title">
+          <span class="material-symbols-outlined">terminal</span>
+          CONTACT_ME
+        </h2>
+        <div class="contact-grid">
+          <div class="contact-terminal neo-shadow">
+            <div class="window__header">
+              <span class="window__title">
+                <span class="material-symbols-outlined">terminal</span>
+                TERMINAL.SH
+              </span>
+              <div class="window__controls">
+                <span class="window__ctrl"></span>
+                <span class="window__ctrl"></span>
+                <span class="window__ctrl window__ctrl--close"></span>
+              </div>
+            </div>
+            <div class="terminal-body">
+              <div class="terminal-line-contact">
+                <span class="t-prompt">npa@dev:~$</span>
+                <span class="t-cmd"> cat contact_info.json</span>
+              </div>
+              <div class="terminal-output">
+                <pre>
+{
+  "name": "Nguyen Phi Anh",
+  "role": "Full Stack Developer",
+  "school": "UET - VNU",
+  "year": 2005,
+  "location": "Hanoi, Vietnam",
+  "email": "npanh0812@gmail.com",
+  "github": "github.com/Anhnguyen0812",
+  "status": "Open to opportunities"
+}</pre
+                >
+              </div>
+              <div class="terminal-line-contact">
+                <span class="t-prompt">npa@dev:~$</span>
+                <span class="t-cursor">_</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-links">
+            <a
+              href="mailto:npanh0812@gmail.com"
+              class="contact-card neo-shadow"
+            >
+              <span class="material-symbols-outlined">mail</span>
+              <div>
+                <div class="contact-card__label">EMAIL</div>
+                <div class="contact-card__value">npanh0812@gmail.com</div>
+              </div>
+            </a>
+            <a
+              href="https://github.com/Anhnguyen0812"
+              target="_blank"
+              class="contact-card neo-shadow"
+            >
+              <span class="material-symbols-outlined">code</span>
+              <div>
+                <div class="contact-card__label">GITHUB</div>
+                <div class="contact-card__value">github.com/Anhnguyen0812</div>
+              </div>
+            </a>
+            <a href="#" class="contact-card neo-shadow">
+              <span class="material-symbols-outlined">description</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="footer__content">
+        <p>
+          &copy; 2025 Nguyen Phi Anh.
+          <span data-i18n="footer.built">Built with ☕ and</span>
+          <span class="footer__highlight">raw HTML/CSS</span>.
+        </p>
+        <p class="footer__sub" data-i18n="footer.design">
+          Designed in Neo-Brutalism style. Hosted on GitHub Pages.
+        </p>
+      </div>
+    </footer>
+
+    <!-- ============ MOBILE BOTTOM NAV ============ -->
+    <nav class="bottom-nav">
+      <a href="#about" class="bottom-nav__link">
+        <span class="material-symbols-outlined">person</span>
+        <span>About</span>
+      </a>
+      <a href="#stack" class="bottom-nav__link">
+        <span class="material-symbols-outlined">memory</span>
+        <span>Stack</span>
+      </a>
+      <a href="#projects" class="bottom-nav__link bottom-nav__link--active">
+        <span class="material-symbols-outlined">folder_open</span>
+        <span>Projects</span>
+      </a>
+      <a href="#contact" class="bottom-nav__link">
+        <span class="material-symbols-outlined">mail</span>
+        <span>Contact</span>
+      </a>
+    </nav>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
