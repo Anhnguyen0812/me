@@ -4,7 +4,7 @@
 
 ## 🚀 Live Demo
 
-Visit: [https://anhnp.github.io](https://anhnp.github.io) *(update with your URL)*
+Visit: [https://anhnguyen0812.github.io/me/)
 
 ## 🛠 Tech Stack
 
