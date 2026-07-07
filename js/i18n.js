@@ -115,7 +115,7 @@ class I18n {
   _createToggle() {
     const btn = document.createElement('button');
     btn.id = 'langToggle';
-    btn.className = 'lang-toggle neo-shadow';
+    btn.className = 'lang-toggle';
     btn.setAttribute('aria-label', 'Switch language');
     btn.title = 'Switch language / Đổi ngôn ngữ';
     this._updateToggleContent(btn);

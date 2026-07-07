@@ -1326,6 +1326,9 @@ a {
         padding: 6px 10px;
         font-size: 11px;
         box-shadow: 4px 4px 0px 0px var(--black);
+        height: auto !important;
+        width: auto !important;
+        max-height: 36px;
     }
     
     .lang-toggle__flag {
@@ -1393,11 +1396,15 @@ a {
     top: 80px;
     right: 20px;
     z-index: 99;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 6px;
     padding: 8px 14px;
+    height: auto !important;
+    width: auto !important;
     background: var(--white);
+    border: var(--border-w) solid var(--black) !important;
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0px 0px var(--black);
     cursor: pointer;
     font-family: var(--font-body);
     font-weight: 700;
@@ -1405,6 +1412,10 @@ a {
     text-transform: uppercase;
     transition: transform var(--transition), box-shadow var(--transition);
     user-select: none;
+    /* Prevent stretching */
+    flex-shrink: 0;
+    align-self: flex-start;
+    max-height: 44px;
 }
 
 .lang-toggle:hover {
